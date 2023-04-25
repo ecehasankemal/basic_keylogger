@@ -1,0 +1,33 @@
+/*int
+        main(int ac, char *av[])
+{
+        char    *buf;
+        int             log_fd;
+        int             attack_fd;
+        int             flags;
+        int             nbytes;
+        int             bytes;
+
+        buf = (char *)malloc(sizeof(char) * 8);
+        log_fd = open("log.txt", O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
+        attack_fd = open("attack.txt", O_RDWR);
+        flags = fcntl(attack_fd, F_GETFL);
+        nbytes = 0;
+        fcntl(attack_fd, flags | O_NONBLOCK);
+
+        while (42)
+        {
+                        lseek(attack_fd, nbytes, SEEK_SET);
+                        bytes = read(attack_fd, buf, sizeof(buf));
+                        if (bytes > 0)
+                        {
+                                        write(log_fd, buf, bytes);
+                                        nbytes += bytes;
+                        }
+                        usleep(100000);
+        }
+        close(log_fd);
+        close(attack_fd);
+        return (0);
+}*/
+
